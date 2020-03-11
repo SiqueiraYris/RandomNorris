@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene: UIWindowScene = scene as? UIWindowScene else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        let rootViewController = MainViewController(nibName: "MainViewController", bundle : nil)
+        let viewModel = JokeViewModel()
+        let rootViewController = JokeViewController(with: viewModel)
         
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
