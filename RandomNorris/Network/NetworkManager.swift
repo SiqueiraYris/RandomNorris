@@ -25,7 +25,7 @@ final class NetworkManager {
 
     private func createUrlRequest(with config: RequestConfiguration) -> URLRequest? {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "http"
+        urlComponents.scheme = config.scheme
         urlComponents.host = config.host
         urlComponents.path = config.path
 
@@ -34,27 +34,27 @@ final class NetworkManager {
         var request = URLRequest(url: url)
         request.httpMethod = "\(config.method)"
 
-//        var httpBody: Data?
-//
-//        if !config.parameters.isEmpty {
-//            switch config.parametersEncoding {
-//            case .url:
-//                urlComponents.setQueryItems(with: config.parameters)
-//                request.url = urlComponents.url
-//                request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-//
-//            case .body:
-//                httpBody = try? JSONSerialization.data(withJSONObject: config.parameters, options: [])
-//                request.setValue("application/json", forHTTPHeaderField: "Accept")
-//                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//            }
-//        }
-//
-//        if let body = httpBody {
-//            request.httpBody = body
-//        }
+        var httpBody: Data?
 
-//        request.allHTTPHeaderFields = config.headers
+        if !config.parameters.isEmpty {
+            switch config.parametersEncoding {
+            case .url:
+                urlComponents.setQueryItems(with: config.parameters)
+                request.url = urlComponents.url
+                request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+
+            case .body:
+                httpBody = try? JSONSerialization.data(withJSONObject: config.parameters, options: [])
+                request.setValue("application/json", forHTTPHeaderField: "Accept")
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            }
+        }
+
+        if let body = httpBody {
+            request.httpBody = body
+        }
+
+        request.allHTTPHeaderFields = config.headers
         
         return request
     }

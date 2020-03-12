@@ -30,28 +30,26 @@ enum NetworkErrors: NSInteger, LocalizedError {
             return rawValue
         }
 
-        
         var errorDescription: String? {
-            return ""
-//            switch self {
-//            case .unauthorized:
-//                return String.localized(by: "UnauthorizedError")
-//
-//            case .notFound:
-//                return String.localized(by: "NotFoundError")
-//
-//            case .internalServerError:
-//                return String.localized(by: "InternalServerError")
-//
-//            case .badRequest:
-//                return String.localized(by: "BadRequestError")
-//
-//            case .timeOut:
-//                return String.localized(by: "TimeOutError")
-//
-//            case .forbidden:
-//                return String.localized(by: "ForbiddenError")
-//            }
+            switch self {
+            case .unauthorized:
+                return String.localized(by: "UnauthorizedError")
+
+            case .notFound:
+                return String.localized(by: "NotFoundError")
+
+            case .internalServerError:
+                return String.localized(by: "InternalServerError")
+
+            case .badRequest:
+                return String.localized(by: "BadRequestError")
+
+            case .timeOut:
+                return String.localized(by: "TimeOutError")
+
+            case .forbidden:
+                return String.localized(by: "ForbiddenError")
+            }
         }
     }
 
@@ -60,29 +58,28 @@ enum NetworkErrors: NSInteger, LocalizedError {
     }
 
     var errorDescription: String? {
-        return ""
-//        switch self {
-//        case .connectionLost:
-//            return String.localized(by: "ConnectionLostError")
-//
-//        case .decoderFailure:
-//            return String.localized(by: "UnexpectedError")
-//
-//        case .malformedUrl:
-//            return String.localized(by: "UnknownError")
-//
-//        case .noData:
-//            return String.localized(by: "NoDataError")
-//
-//        case .notConnected:
-//            return String.localized(by: "ConnectionError")
-//
-//        case .requestFailure:
-//            return String.localized(by: "UnexpectedError")
-//
-//        case .unknownFailure:
-//            return String.localized(by: "UnknownError")
-//        }
+        switch self {
+        case .connectionLost:
+            return String.localized(by: "ConnectionLostError")
+
+        case .decoderFailure:
+            return String.localized(by: "UnexpectedError")
+
+        case .malformedUrl:
+            return String.localized(by: "UnknownError")
+
+        case .noData:
+            return String.localized(by: "NoDataError")
+
+        case .notConnected:
+            return String.localized(by: "ConnectionError")
+
+        case .requestFailure:
+            return String.localized(by: "UnexpectedError")
+
+        case .unknownFailure:
+            return String.localized(by: "UnknownError")
+        }
     }
 }
 
@@ -111,7 +108,7 @@ struct ErrorHandler: LocalizedError {
 
     init(statusCode: Int? = nil, data: Data? = nil, defaultError: NetworkErrors.HTTPErrors = .badRequest) {
         self.code = statusCode
-        self.message = defaultError.errorDescription ?? "ERROR"
+        self.message = defaultError.errorDescription ?? String.localized(by: "Error").uppercased()
 
         guard let data = data else { return }
 
@@ -120,13 +117,13 @@ struct ErrorHandler: LocalizedError {
             let objectError = try decoder.decode(DefaultError.self, from: data)
             message = objectError.message
         } catch {
-            self.message = defaultError.errorDescription ?? "ERROR"
+            self.message = defaultError.errorDescription ?? String.localized(by: "Error").uppercased()
         }
     }
 
     init(statusCode: Int? = nil, data: Data? = nil, defaultError: NetworkErrors = .decoderFailure) {
         self.code = statusCode
-        self.message = defaultError.errorDescription ?? "ERROR"
+        self.message = defaultError.errorDescription ?? String.localized(by: "Error").uppercased()
 
         guard let data = data else { return }
 
@@ -135,7 +132,7 @@ struct ErrorHandler: LocalizedError {
             let objectError = try decoder.decode(DefaultError.self, from: data)
             message = objectError.message
         } catch {
-            self.message = defaultError.errorDescription ?? "ERROR"
+            self.message = defaultError.errorDescription ?? String.localized(by: "Error").uppercased()
         }
     }
 }

@@ -62,7 +62,7 @@ final class JokeViewController: UIViewController {
         viewModel.error.bind { [weak self] error in
             guard let self = self, let error = error else { return }
 
-            self.showAlert(title: "Erro", message: error.localizedDescription)
+            self.showAlert(title: String.localized(by: "Error"), message: error.localizedDescription)
         }
     }
 }

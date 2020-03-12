@@ -16,7 +16,7 @@ final class JokeView: UIView {
     // MARK: - Views
     private lazy var jokeButton: UIButton = {
         let button = UIButton(frame: .zero)
-        button.setTitle("Get a joke", for: .normal)
+        button.setTitle(String.localized(by: "GetJoke"), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 20.0
         button.translatesAutoresizingMaskIntoConstraints = false

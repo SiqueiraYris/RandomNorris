@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  RandomNorris
+
+  Created by Siqueira on 12/03/20.
+  Copyright © 2020 Siqueira. All rights reserved.
+*/
+
+// MARK: - General
+"Ok" = "Ok";
+"Error" = "Error";
+"GetJoke" = "Get a joke";
+
+// MARK: - NetworkErrors
+"ConnectionError" = "Please, verify your conection!";
+"ConnectionLostError" = "There was a connection lost";
+"NoDataError" = "The requested service did not return data.";
+"UnexpectedError" = "Sorry, something went wrong. Try again or contact the administrator.";
+"UnknownError" = "An unknown error has occurred";
+
+// MARK: - HTTPErrors
+"BadRequestError" = "Incorrect requested service.";
+"ForbiddenError" = "The requested service was refused.";
+"InternalServerError" = "The requested service got an unexpected condition.";
+"NotFoundError" = "The requested service cannot be found.";
+"TimeOutError" = "The requested service received no response.";
+"UnauthorizedError" = "Unauthorized requested service.";

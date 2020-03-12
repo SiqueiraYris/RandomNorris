@@ -12,6 +12,7 @@ struct RequestConfiguration {
     // MARK: - Attributes
     var host: String
     var path: String
+    var scheme: String
     var method: HTTPMethod
     var parameters: [String: Any]
     var headers: [String: String]
@@ -21,12 +22,14 @@ struct RequestConfiguration {
     //TODO: get default value from plist
     init(host: String = "api.icndb.com",
          path: String,
+         scheme: String = "http",
          method: HTTPMethod = .get,
          encoding: ParameterEncoding = .url,
          parameters: [String: Any] = [:],
          headers: [String: String] = [:]) {
         self.host = host
         self.path = path
+        self.scheme = scheme
         self.method = method
         self.parameters = parameters
         self.headers = headers

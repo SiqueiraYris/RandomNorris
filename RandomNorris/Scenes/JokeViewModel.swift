@@ -36,6 +36,7 @@ final class JokeViewModel: JokeViewModelProtocol {
             switch result {
             case .success(let dataSource):
                 self.joke.value = dataSource.value
+
             case .failure(let error):
                 self.error.value = error
             }
