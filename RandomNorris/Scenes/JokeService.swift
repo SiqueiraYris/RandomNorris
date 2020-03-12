@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias FetchJokeResult = (Result<Random, ErrorHandler>) -> Void
+typealias FetchJokeResult = (Result<JokeResponse, ErrorHandler>) -> Void
 
 protocol JokeServiceProtocol: AnyObject {
     func fetchJoke(_ route: JokeRoute, completion: @escaping FetchJokeResult)

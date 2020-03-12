@@ -9,12 +9,17 @@
 import Foundation
 
 protocol JokeViewModelProtocol {
+    var joke: Dynamic<Joke?> { get }
+    var error: Dynamic<Error?> { get }
+
     func fetchJoke()
 }
 
 final class JokeViewModel: JokeViewModelProtocol {
     // MARK: - Attributes
     private var service: JokeServiceProtocol
+    var joke: Dynamic<Joke?> = Dynamic(nil)
+    var error: Dynamic<Error?> = Dynamic(nil)
 
     // MARK: - Initializer
     init(service: JokeService = JokeService()) {
@@ -23,13 +28,15 @@ final class JokeViewModel: JokeViewModelProtocol {
 
     func fetchJoke() {
         let route = JokeRoute.fetchJoke
-        
-        service.fetchJoke(route) { [weak self] (result: Result<Random, ErrorHandler>) in
+
+        service.fetchJoke(route) { [weak self] (result: Result<JokeResponse, ErrorHandler>) in
+            guard let self = self else { return }
+
             switch result {
             case .success(let dataSource):
-                print("dataSource \(dataSource)")
-            case .failure(let error) :
-                print("error \(error)")
+                self.joke.value = dataSource.value
+            case .failure(let error):
+                self.error.value = error
             }
         }
     }
