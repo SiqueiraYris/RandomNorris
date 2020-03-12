@@ -14,6 +14,7 @@
 		4DADE871241A9272006B4A43 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE870241A9272006B4A43 /* Joke.swift */; };
 		4DADE873241A9689006B4A43 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE872241A9689006B4A43 /* String+Localization.swift */; };
 		4DADE875241A96CC006B4A43 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DADE874241A96CC006B4A43 /* Localizable.strings */; };
+		4DADE877241AA812006B4A43 /* ConfigurationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE876241AA812006B4A43 /* ConfigurationConstants.swift */; };
 		4DE7D2392419195600BF9142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D2382419195600BF9142 /* AppDelegate.swift */; };
 		4DE7D23B2419195600BF9142 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D23A2419195600BF9142 /* SceneDelegate.swift */; };
 		4DE7D2422419195C00BF9142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE7D2412419195C00BF9142 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		4DADE870241A9272006B4A43 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		4DADE872241A9689006B4A43 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		4DADE874241A96CC006B4A43 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		4DADE876241AA812006B4A43 /* ConfigurationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationConstants.swift; sourceTree = "<group>"; };
 		4DE7D2352419195600BF9142 /* RandomNorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomNorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE7D2382419195600BF9142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		4DE7D23A2419195600BF9142 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,10 +115,22 @@
 		4DADE869241A8869006B4A43 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4DADE876241AA812006B4A43 /* ConfigurationConstants.swift */,
 				4DADE86C241A8B8B006B4A43 /* Dynamic.swift */,
 				4DADE86A241A8876006B4A43 /* ViewConfiguration.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4DADE878241AABF7006B4A43 /* Joke */ = {
+			isa = PBXGroup;
+			children = (
+				4DE7D282241972B100BF9142 /* JokeService.swift */,
+				4DADE867241A659A006B4A43 /* JokeView.swift */,
+				4DE7D26C24196ABF00BF9142 /* JokeViewController.swift */,
+				4DE7D280241971EF00BF9142 /* JokeViewModel.swift */,
+			);
+			path = Joke;
 			sourceTree = "<group>";
 		};
 		4DE7D22C2419195500BF9142 = {
@@ -144,7 +158,6 @@
 			children = (
 				4DE7D26824191A8D00BF9142 /* Application */,
 				4DE7D27B241970E100BF9142 /* Extensions */,
-				4DE7D2432419195C00BF9142 /* LaunchScreen.storyboard */,
 				4DE7D2862419734B00BF9142 /* Models */,
 				4DE7D26A24195ADA00BF9142 /* Network */,
 				4DE7D26924191AAA00BF9142 /* Resources */,
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				4DE7D2412419195C00BF9142 /* Assets.xcassets */,
+				4DE7D2432419195C00BF9142 /* LaunchScreen.storyboard */,
 				4DADE874241A96CC006B4A43 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -207,10 +221,7 @@
 		4DE7D26B24195AF300BF9142 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				4DE7D282241972B100BF9142 /* JokeService.swift */,
-				4DADE867241A659A006B4A43 /* JokeView.swift */,
-				4DE7D26C24196ABF00BF9142 /* JokeViewController.swift */,
-				4DE7D280241971EF00BF9142 /* JokeViewModel.swift */,
+				4DADE878241AABF7006B4A43 /* Joke */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -379,6 +390,7 @@
 				4DE7D2392419195600BF9142 /* AppDelegate.swift in Sources */,
 				4DE7D2772419701500BF9142 /* NetworkError.swift in Sources */,
 				4DE7D23B2419195600BF9142 /* SceneDelegate.swift in Sources */,
+				4DADE877241AA812006B4A43 /* ConfigurationConstants.swift in Sources */,
 				4DE7D27D241970EB00BF9142 /* URLComponents+Extension.swift in Sources */,
 				4DADE86B241A8876006B4A43 /* ViewConfiguration.swift in Sources */,
 				4DE7D2852419730800BF9142 /* JokeRoute.swift in Sources */,

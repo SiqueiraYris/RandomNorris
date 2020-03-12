@@ -14,8 +14,8 @@ enum JokeRoute: NetworkRoute {
     var configuration: RequestConfiguration {
         switch self {
         case .fetchJoke:
-            let config = RequestConfiguration(host: "api.icndb.com",
-                                       path: "/jokes/random/",
+            let config = RequestConfiguration(host: serverHost,
+                                       path: randomPath,
                                        method: .get,
                                        encoding: .url)
             return config

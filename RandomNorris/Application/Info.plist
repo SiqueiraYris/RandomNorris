@@ -61,5 +61,14 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>Configurations</key>
+	<dict>
+		<key>host</key>
+		<string>api.icndb.com</string>
+		<key>scheme</key>
+		<string>http</string>
+		<key>randomPath</key>
+		<string>/jokes/random/</string>
+	</dict>
 </dict>
 </plist>

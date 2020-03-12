@@ -19,10 +19,9 @@ struct RequestConfiguration {
     var parametersEncoding: ParameterEncoding
 
     // MARK: - Initializer
-    //TODO: get default value from plist
-    init(host: String = "api.icndb.com",
+    init(host: String = serverHost,
          path: String,
-         scheme: String = "http",
+         scheme: String = uriScheme,
          method: HTTPMethod = .get,
          encoding: ParameterEncoding = .url,
          parameters: [String: Any] = [:],
