@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DADE868241A659A006B4A43 /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE867241A659A006B4A43 /* JokeView.swift */; };
+		4DADE86B241A8876006B4A43 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE86A241A8876006B4A43 /* ViewConfiguration.swift */; };
+		4DADE86D241A8B8B006B4A43 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE86C241A8B8B006B4A43 /* Dynamic.swift */; };
+		4DADE86F241A8E1C006B4A43 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE86E241A8E1C006B4A43 /* UIViewController+Extension.swift */; };
+		4DADE871241A9272006B4A43 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADE870241A9272006B4A43 /* Joke.swift */; };
 		4DE7D2392419195600BF9142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D2382419195600BF9142 /* AppDelegate.swift */; };
 		4DE7D23B2419195600BF9142 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D23A2419195600BF9142 /* SceneDelegate.swift */; };
 		4DE7D2422419195C00BF9142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE7D2412419195C00BF9142 /* Assets.xcassets */; };
@@ -14,7 +19,6 @@
 		4DE7D2502419195D00BF9142 /* RandomNorrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D24F2419195D00BF9142 /* RandomNorrisTests.swift */; };
 		4DE7D25B2419195D00BF9142 /* RandomNorrisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D25A2419195D00BF9142 /* RandomNorrisUITests.swift */; };
 		4DE7D26E24196ABF00BF9142 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D26C24196ABF00BF9142 /* JokeViewController.swift */; };
-		4DE7D26F24196ABF00BF9142 /* JokeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE7D26D24196ABF00BF9142 /* JokeViewController.xib */; };
 		4DE7D27124196FD100BF9142 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D27024196FD100BF9142 /* NetworkManagerProtocol.swift */; };
 		4DE7D27324196FEA00BF9142 /* RequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D27224196FEA00BF9142 /* RequestConfiguration.swift */; };
 		4DE7D2752419700700BF9142 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D2742419700700BF9142 /* NetworkManager.swift */; };
@@ -25,7 +29,7 @@
 		4DE7D281241971EF00BF9142 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D280241971EF00BF9142 /* JokeViewModel.swift */; };
 		4DE7D283241972B100BF9142 /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D282241972B100BF9142 /* JokeService.swift */; };
 		4DE7D2852419730800BF9142 /* JokeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D2842419730800BF9142 /* JokeRoute.swift */; };
-		4DE7D2882419743800BF9142 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D2872419743800BF9142 /* Joke.swift */; };
+		4DE7D2882419743800BF9142 /* JokeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7D2872419743800BF9142 /* JokeResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DADE867241A659A006B4A43 /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		4DADE86A241A8876006B4A43 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		4DADE86C241A8B8B006B4A43 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		4DADE86E241A8E1C006B4A43 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4DADE870241A9272006B4A43 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		4DE7D2352419195600BF9142 /* RandomNorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomNorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE7D2382419195600BF9142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		4DE7D23A2419195600BF9142 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +68,6 @@
 		4DE7D25A2419195D00BF9142 /* RandomNorrisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNorrisUITests.swift; sourceTree = "<group>"; };
 		4DE7D25C2419195D00BF9142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE7D26C24196ABF00BF9142 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
-		4DE7D26D24196ABF00BF9142 /* JokeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeViewController.xib; sourceTree = "<group>"; };
 		4DE7D27024196FD100BF9142 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		4DE7D27224196FEA00BF9142 /* RequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
 		4DE7D2742419700700BF9142 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -70,7 +78,7 @@
 		4DE7D280241971EF00BF9142 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
 		4DE7D282241972B100BF9142 /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
 		4DE7D2842419730800BF9142 /* JokeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeRoute.swift; sourceTree = "<group>"; };
-		4DE7D2872419743800BF9142 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		4DE7D2872419743800BF9142 /* JokeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DADE869241A8869006B4A43 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4DADE86C241A8B8B006B4A43 /* Dynamic.swift */,
+				4DADE86A241A8876006B4A43 /* ViewConfiguration.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4DE7D22C2419195500BF9142 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +145,7 @@
 				4DE7D26A24195ADA00BF9142 /* Network */,
 				4DE7D26924191AAA00BF9142 /* Resources */,
 				4DE7D26B24195AF300BF9142 /* Scenes */,
+				4DADE869241A8869006B4A43 /* Utils */,
 			);
 			path = RandomNorris;
 			sourceTree = "<group>";
@@ -184,10 +202,10 @@
 		4DE7D26B24195AF300BF9142 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				4DE7D26C24196ABF00BF9142 /* JokeViewController.swift */,
-				4DE7D26D24196ABF00BF9142 /* JokeViewController.xib */,
-				4DE7D280241971EF00BF9142 /* JokeViewModel.swift */,
 				4DE7D282241972B100BF9142 /* JokeService.swift */,
+				4DADE867241A659A006B4A43 /* JokeView.swift */,
+				4DE7D26C24196ABF00BF9142 /* JokeViewController.swift */,
+				4DE7D280241971EF00BF9142 /* JokeViewModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -203,8 +221,9 @@
 		4DE7D27B241970E100BF9142 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4DE7D27C241970EB00BF9142 /* URLComponents+Extension.swift */,
 				4DE7D27E2419710D00BF9142 /* Data+Extension.swift */,
+				4DADE86E241A8E1C006B4A43 /* UIViewController+Extension.swift */,
+				4DE7D27C241970EB00BF9142 /* URLComponents+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,7 +231,8 @@
 		4DE7D2862419734B00BF9142 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4DE7D2872419743800BF9142 /* Joke.swift */,
+				4DADE870241A9272006B4A43 /* Joke.swift */,
+				4DE7D2872419743800BF9142 /* JokeResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,7 +343,6 @@
 			files = (
 				4DE7D2452419195C00BF9142 /* LaunchScreen.storyboard in Resources */,
 				4DE7D2422419195C00BF9142 /* Assets.xcassets in Resources */,
-				4DE7D26F24196ABF00BF9142 /* JokeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,18 +367,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DADE86F241A8E1C006B4A43 /* UIViewController+Extension.swift in Sources */,
 				4DE7D2752419700700BF9142 /* NetworkManager.swift in Sources */,
 				4DE7D2392419195600BF9142 /* AppDelegate.swift in Sources */,
 				4DE7D2772419701500BF9142 /* NetworkError.swift in Sources */,
 				4DE7D23B2419195600BF9142 /* SceneDelegate.swift in Sources */,
 				4DE7D27D241970EB00BF9142 /* URLComponents+Extension.swift in Sources */,
+				4DADE86B241A8876006B4A43 /* ViewConfiguration.swift in Sources */,
 				4DE7D2852419730800BF9142 /* JokeRoute.swift in Sources */,
-				4DE7D2882419743800BF9142 /* Joke.swift in Sources */,
+				4DE7D2882419743800BF9142 /* JokeResponse.swift in Sources */,
 				4DE7D27F2419710D00BF9142 /* Data+Extension.swift in Sources */,
 				4DE7D283241972B100BF9142 /* JokeService.swift in Sources */,
+				4DADE86D241A8B8B006B4A43 /* Dynamic.swift in Sources */,
 				4DE7D281241971EF00BF9142 /* JokeViewModel.swift in Sources */,
+				4DADE868241A659A006B4A43 /* JokeView.swift in Sources */,
 				4DE7D27124196FD100BF9142 /* NetworkManagerProtocol.swift in Sources */,
 				4DE7D27324196FEA00BF9142 /* RequestConfiguration.swift in Sources */,
+				4DADE871241A9272006B4A43 /* Joke.swift in Sources */,
 				4DE7D2792419703600BF9142 /* NetworkRoute.swift in Sources */,
 				4DE7D26E24196ABF00BF9142 /* JokeViewController.swift in Sources */,
 			);

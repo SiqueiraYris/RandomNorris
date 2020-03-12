@@ -26,6 +26,7 @@ final class JokeViewModel: JokeViewModelProtocol {
         self.service = service
     }
 
+    // MARK: - Functions
     func fetchJoke() {
         let route = JokeRoute.fetchJoke
 
