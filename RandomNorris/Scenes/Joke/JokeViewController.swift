@@ -64,6 +64,18 @@ final class JokeViewController: UIViewController {
 
             self.showAlert(title: String.localized(by: "Error"), message: error.localizedDescription)
         }
+        
+        viewModel.loading.bind { [weak self] loading in
+            guard let self = self else { return }
+
+            if loading {
+                self.startActivityIndicator()
+            } else {
+                self.stopActivityIndicator()
+            }
+
+            self.jokeView.isJokeButtonHidden(isHidden: loading)
+        }
     }
 }
 

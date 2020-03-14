@@ -46,6 +46,11 @@ final class JokeView: UIView {
     @objc private func didTapJokeButton() {
         delegate?.onTapJokeButton()
     }
+
+    // MARK: - Functions
+    func isJokeButtonHidden(isHidden: Bool) {
+        jokeButton.isHidden = isHidden
+    }
 }
 
 // MARK: - ViewConfiguration
